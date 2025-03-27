@@ -1,4 +1,6 @@
 import Costs from "./Components/Costs/Costs";
+import "./Components/New Cost/NewCost";
+import NewCost from "./Components/New Cost/NewCost";
 
 import "./index.scss";
 
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <>
+      <NewCost />
       <Costs costsValue={coststInfo} />
     </>
   );
