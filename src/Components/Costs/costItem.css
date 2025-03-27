@@ -1,28 +1,27 @@
 .cost-item {
-    padding: 1rem;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color:rgb(191, 191, 210);
-    max-width: 100vw;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(39, 39, 42);
+  max-width: 100vw;
+  border: 1.5px solid rgb(151, 252, 0);
 }
 
-.cost-item__name{
-    color: #3a3a3a;
-    font-size: 1rem;
-    flex: 1;
-    margin: 0 1rem;
-    color: #fefae1;
+.cost-item__name {
+  font-size: 1.5rem;
+  flex: 1;
+  margin: 0 1rem;
+  color: rgb(151, 252, 0);
 }
 
-.cost-item__summ{
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fefae1;
-    background-color: #2a5b84;
-    border: 1px solid white;
-    padding: 0.5rem;
-    border-radius: 12px;
+.cost-item__summ {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fefae1;
+  background-color: rgb(149, 149, 172);
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
 }
-
