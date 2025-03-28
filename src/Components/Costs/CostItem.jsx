@@ -10,7 +10,6 @@ const[item, setItem] = useState(props.item);
 
 const changeItemHandler = () => {
   setItem('new item');
-
 }
 
   return (

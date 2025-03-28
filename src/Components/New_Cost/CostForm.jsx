@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./costForm.css";
 
-function CostForm() {
+function CostForm(props) {
   const [name, setName] = useState("");
   const [cost, setCost] = useState("");
   const [date, setDate] = useState("");
@@ -67,6 +67,7 @@ function CostForm() {
       date: date instanceof Date ? date : new Date(date), //use date as an obj not str
     };
 
+    props.onSaveDataForm(allFormFieldsData);
     //to clear the form fields after submit
     setName("");
     setCost("");
