@@ -1,6 +1,6 @@
 import Costs from "./Components/Costs/Costs";
-import "./Components/New Cost/NewCost";
-import NewCost from "./Components/New Cost/NewCost";
+import "./Components/New_Cost/NewCost";
+import NewCost from "./Components/New_Cost/NewCost";
 
 import "./index.scss";
 
