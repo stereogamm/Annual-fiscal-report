@@ -13,7 +13,9 @@
 
 .costs-filter label {
   font-weight: bold;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: rgb(151, 252, 0);
 }
 
 .costs-filter select {
@@ -22,3 +24,5 @@
   font-weight: bold;
   border-radius: 6px;
 }
+
+
