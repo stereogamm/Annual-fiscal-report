@@ -1,11 +1,23 @@
+import { useState } from 'react';
 import CostItem from "./CostItem";
 import Card from "../UI/Card";
+import Filter from "./Filter";
 
 import "./costs.css";
 
 function Costs(props) {
+
+  const[selectedYear, setSelectedYear] = useState("2022");
+
+  function handleYearChange(year) {
+    setSelectedYear(year);
+  }
+
+  //controlled component <Filter />, component Costs is controller
   return (
+    <>
     <Card className="costs__container">
+    <Filter year={selectedYear} onYearSelect={handleYearChange}/> 
       <CostItem
         date={props.costsValue[0].date}
         item={props.costsValue[0].item}
@@ -22,6 +34,7 @@ function Costs(props) {
         summa={props.costsValue[2].sum}
       />
     </Card>
+    </>
   );
 }
 
