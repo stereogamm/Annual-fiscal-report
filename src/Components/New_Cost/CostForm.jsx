@@ -62,8 +62,8 @@ function CostForm(props) {
 
     //created the finish user data obj from the fields data. We should hand over it to the App component to add to the coststInfo array futher
     const allFormFieldsData = {
-      name: name,
-      cost: cost,
+      item: name,
+      sum: cost,
       date: date instanceof Date ? date : new Date(date), //use date as an obj not str
     };
 
