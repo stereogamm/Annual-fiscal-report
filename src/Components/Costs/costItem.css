@@ -12,7 +12,7 @@
 .cost-item__name {
   font-size: 1.5rem;
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 2rem;
   color: rgb(151, 252, 0);
 }
 
@@ -22,6 +22,7 @@
   color: #fefae1;
   background-color: rgb(149, 149, 172);
   border: 1px solid white;
-  padding: 0.5rem;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 2rem;
 }
