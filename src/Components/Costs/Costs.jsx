@@ -12,12 +12,17 @@ function Costs(props) {
     setSelectedYear(year);
   }
 
+  //add filter method to filter cost item according to filtered date
+  const filteredData = props.costsValue.filter(card => {
+    return card.date.getFullYear().toString() ===  selectedYear});
+  console.log('filteredData',filteredData)
+
   //controlled component <Filter />, component Costs is controller
   return (
     <>
       <Card className="costs__container">
         <Filter year={selectedYear} onYearSelect={handleYearChange} />
-        {props.costsValue.map((item) => (
+        {filteredData.map((item) => (
           <CostItem
             date={item.date}
             item={item.item}
