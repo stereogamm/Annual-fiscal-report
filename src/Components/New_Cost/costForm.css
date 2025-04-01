@@ -1,28 +1,28 @@
 .new-cost__controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .new-cost__control label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-    color: rgb(151, 252, 0);
-  }
-  
-  .new-cost__control input {
-    font: inherit;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 20rem;
-    max-width: 100%;
-    border: 2px solid rgb(151, 252, 0);
-  }
-  
-  .new-cost__actions {
-    text-align: left;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-cost__control label {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: rgb(147, 158, 240);
+}
+
+.new-cost__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+  font-weight: 400;
+}
+
+.new-cost__actions {
+  text-align: left;
+}

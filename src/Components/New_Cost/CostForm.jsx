@@ -62,8 +62,8 @@ function CostForm(props) {
 
     //created the finish user data obj from the fields data. We should hand over it to the App component to add to the coststInfo array futher
     const allFormFieldsData = {
-      name: name,
-      cost: cost,
+      item: name,
+      sum: cost,
       date: date instanceof Date ? date : new Date(date), //use date as an obj not str
     };
 
@@ -79,13 +79,13 @@ function CostForm(props) {
       <form onSubmit={submitHandler}>
         <div className="new-cost__controls">
           <div className="new-cost__control">
-            <label>Name</label>
+            <label>Planet name</label>
             <input type="text" value={name} onChange={changeNameHandler} />
           </div>
         </div>
         <div className="new-cost__controls">
           <div className="new-cost__control">
-            <label>Cost</label>
+            <label>Danger level</label>
             <input
               type="number"
               min="0.01"
@@ -97,7 +97,7 @@ function CostForm(props) {
         </div>
         <div className="new-cost__controls">
           <div className="new-cost__control">
-            <label>Date</label>
+            <label>Year of discovery</label>
             <input
               type="date"
               min="2020-01-01"
@@ -108,7 +108,7 @@ function CostForm(props) {
           </div>
         </div>
         <div className="new-cost__actions">
-          <button type="submit">Add cost</button>
+          <button type="submit">Add planet</button>
         </div>
       </form>
     </>

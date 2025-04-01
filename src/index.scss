@@ -4,11 +4,9 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1c1c1b;
-  background-image: url(../public/spiral.svg), url(../public/curve-array-thinner.svg);
-  background-position: calc(100% + 400px) calc(0% - 300px), calc(0% - 100px) calc(100% + 50px);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 750px 750px, 750px 750px;
+  background-color: #000000;
+  font-family: "Prompt", sans-serif;
+  font-style: normal;
 }
 
 .App {
@@ -38,3 +36,4 @@ body {
     }
   }
 }
+

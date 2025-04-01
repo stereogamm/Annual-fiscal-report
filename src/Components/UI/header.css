@@ -1,0 +1,44 @@
+header {
+  min-height: 700px;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  width: 80rem;
+  max-width: 95%;
+}
+
+.header-block {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-text {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  color: rgb(255, 255, 255);
+  font-size: 6.5rem;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.header-text::after {
+  content: "discover the unknown";
+  position: absolute;
+  top: 1.2rem;  
+  left: 100%; 
+  transform: translateX(10px);
+  text-wrap: nowrap;
+  font-size: 1.2rem;
+  color: rgb(211, 236, 248);
+  font-weight: 200;
+}
+
+.header-icon {
+    align-self: end;
+    cursor: pointer;
+}
