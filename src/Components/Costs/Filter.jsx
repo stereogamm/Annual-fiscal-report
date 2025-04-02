@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./CostsFilter.css";
 
 function Filter(props) {
