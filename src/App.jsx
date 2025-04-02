@@ -9,7 +9,7 @@ import "./index.scss";
 
 const INITIAL_COSTS = [
   {
-    date: new Date(2022, 10, 2),
+    date: new Date(2023, 8, 6),
     item: "Luminis",
     sum: 11,
     id: "a0",
@@ -21,13 +21,13 @@ const INITIAL_COSTS = [
     id: "b1",
   },
   {
-    date: new Date(2023, 11, 1),
+    date: new Date(2024, 11, 1),
     item: "Galatia",
     sum: 3,
     id: "c2",
   },
   {
-    date: new Date(2025, 2, 3),
+    date: new Date(2022, 2, 3),
     item: "Eterna",
     sum: 1,
     id: "d3",

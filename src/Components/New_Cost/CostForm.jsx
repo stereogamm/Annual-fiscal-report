@@ -74,6 +74,14 @@ function CostForm(props) {
     setDate("");
   }
 
+  //logic to clean fields data in decline case
+  function cleanFieldsData(event) {
+    event.preventDefault();
+    setName("");
+    setCost("");
+    setDate("");
+  }
+
   return (
     <>
       <form onSubmit={submitHandler}>
@@ -109,6 +117,7 @@ function CostForm(props) {
         </div>
         <div className="new-cost__actions">
           <button type="submit">Add planet</button>
+          <button type="submit" onClick={cleanFieldsData}>Decline</button>
         </div>
       </form>
     </>
