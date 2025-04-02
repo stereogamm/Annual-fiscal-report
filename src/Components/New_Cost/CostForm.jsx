@@ -69,7 +69,7 @@ function CostForm({ onSaveDataForm, onHideForm }) {
 
     //call parent component function
     onSaveDataForm(allFormFieldsData);
-    
+
     //to clear the form fields after submit
     setName("");
     setCost("");
@@ -114,7 +114,7 @@ function CostForm({ onSaveDataForm, onHideForm }) {
         </div>
         <div className="new-cost__actions">
           <button type="submit">Add planet</button>
-          <button type="submit" onClick={onHideForm}>
+          <button type="button" onClick={onHideForm}>
             Decline
           </button>
         </div>
