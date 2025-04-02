@@ -4,3 +4,11 @@
     max-width: 95%;
     width: 80rem;
 }
+
+.text {
+    font-weight: 300;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 4rem;
+}

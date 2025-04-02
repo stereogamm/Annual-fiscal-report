@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./CostsFilter.css";
 
 function Filter(props) {
+
   function yearChangeHandler(event) {
     props.onYearSelect(event.target.value);
   }
