@@ -2,33 +2,31 @@ import { useState, useRef } from "react";
 import Costs from "./Components/Costs/Costs";
 import NewCost from "./Components/New_Cost/NewCost";
 import Header from "./Components/UI/Header";
-import * as THREE from "three";
-import HALO from "vanta/dist/vanta.halo.min";
 
 import "./index.scss";
 
 const INITIAL_COSTS = [
   {
     date: new Date(2023, 8, 6),
-    item: "Luminis",
+    item: "🌓 Luminis",
     sum: 11,
     id: "a0",
   },
   {
     date: new Date(2024, 10, 19),
-    item: "Serenity",
+    item: " 🌖 Serenity",
     sum: 4,
     id: "b1",
   },
   {
     date: new Date(2024, 11, 1),
-    item: "Galatia",
+    item: " 🌑 Galatia",
     sum: 3,
     id: "c2",
   },
   {
     date: new Date(2022, 2, 3),
-    item: "Eterna",
+    item: " 🪐 Eterna",
     sum: 1,
     id: "d3",
   },

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./costForm.css";
 
-function CostForm(props) {
+function CostForm({ onSaveDataForm, onHideForm }) {
   const [name, setName] = useState("");
   const [cost, setCost] = useState("");
   const [date, setDate] = useState("");
@@ -67,19 +67,16 @@ function CostForm(props) {
       date: date instanceof Date ? date : new Date(date), //use date as an obj not str
     };
 
-    props.onSaveDataForm(allFormFieldsData);
+    //call parent component function
+    onSaveDataForm(allFormFieldsData);
+
     //to clear the form fields after submit
     setName("");
     setCost("");
     setDate("");
-  }
 
-  //logic to clean fields data in decline case
-  function cleanFieldsData(event) {
-    event.preventDefault();
-    setName("");
-    setCost("");
-    setDate("");
+    //hide form when user click on decline button
+    onHideForm();
   }
 
   return (
@@ -88,36 +85,38 @@ function CostForm(props) {
         <div className="new-cost__controls">
           <div className="new-cost__control">
             <label>Planet name</label>
-            <input type="text" value={name} onChange={changeNameHandler} />
+              <input type="text" value={name} onChange={changeNameHandler} />
           </div>
         </div>
         <div className="new-cost__controls">
           <div className="new-cost__control">
             <label>Danger level</label>
-            <input
-              type="number"
-              min="0.01"
-              step="0.01"
-              onChange={changeCostHandler}
-              value={cost}
-            />
+              <input
+                type="number"
+                min="0.01"
+                step="0.01"
+                onChange={changeCostHandler}
+                value={cost}
+              />
           </div>
         </div>
         <div className="new-cost__controls">
           <div className="new-cost__control">
             <label>Year of discovery</label>
-            <input
-              type="date"
-              min="2020-01-01"
-              max="2025-12-12"
-              onChange={changeDateHandler}
-              value={date}
-            />
+              <input
+                type="date"
+                min="2020-01-01"
+                max="2025-12-12"
+                onChange={changeDateHandler}
+                value={date}
+              />
           </div>
         </div>
         <div className="new-cost__actions">
           <button type="submit">Add planet</button>
-          <button type="submit" onClick={cleanFieldsData}>Decline</button>
+          <button type="button" onClick={onHideForm}>
+            Decline
+          </button>
         </div>
       </form>
     </>

@@ -1,8 +1,10 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import CostForm from "./CostForm";
 import "./newCost.css";
+import NewCostContainer from "./NewCostContainer";
 
 const NewCost = forwardRef((props, ref) => {
+  const [isFormVisible, setFormVisible] = useState(false);
 
   function dataFormHandler(allFormFieldsData) {
     const costData = {
@@ -10,6 +12,11 @@ const NewCost = forwardRef((props, ref) => {
       id: "q4",
     };
     props.onAddCost(costData);
+  }
+
+  //show/hide form
+  function formVisibleHandler() {
+    setFormVisible((prev) => !prev);
   }
 
   return (
@@ -21,9 +28,15 @@ const NewCost = forwardRef((props, ref) => {
         danger. Each discovery becomes part of your logbook, which you can view
         and analyze through annual graphs.
       </span>
-      <CostForm onSaveDataForm={dataFormHandler} />
+      {!isFormVisible && <NewCostContainer onShowForm={formVisibleHandler} />}
+      {isFormVisible && (
+        <CostForm
+          onHideForm={formVisibleHandler}
+          onSaveDataForm={dataFormHandler}
+        />
+      )}
     </div>
   );
-})
+});
 
 export default NewCost;

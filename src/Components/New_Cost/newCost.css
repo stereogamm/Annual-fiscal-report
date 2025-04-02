@@ -11,7 +11,7 @@
 span {
   display: flex;
   margin: 3rem 0;
-  align-items: start;
+  align-items: flex-start;
   color: aliceblue;
   font-size: 2rem;
 }
@@ -26,9 +26,17 @@ span {
   margin: 20px 20px 20px 0px;
   border: 1px solid rgb(40, 50, 112);
   font-weight: 400;
+  transition: background-color, text-shadow, transform, .4s ease-in-out;
 }
 
-.new-cost button:hover,
+.new-cost button:hover {
+  transform: scale(101%);
+  background-color: rgb(31, 38, 84);
+  text-shadow: 0 0 10px rgb(253, 197, 255),
+  0 0 20px rgb(255, 254, 255), 0 0 30px rgb(254, 255, 212);
+}
+
 .new-cost button:active {
-  background-color: rgb(40, 50, 112);
+  background-color: rgb(87, 48, 245);
+  transform: scale(97%);
 }
