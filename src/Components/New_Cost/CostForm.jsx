@@ -85,31 +85,31 @@ function CostForm({ onSaveDataForm, onHideForm }) {
         <div className="new-cost__controls">
           <div className="new-cost__control">
             <label>Planet name</label>
-              <input type="text" value={name} onChange={changeNameHandler} />
+            <input type="text" value={name} onChange={changeNameHandler} />
           </div>
         </div>
         <div className="new-cost__controls">
           <div className="new-cost__control">
             <label>Danger level</label>
-              <input
-                type="number"
-                min="0.01"
-                step="0.01"
-                onChange={changeCostHandler}
-                value={cost}
-              />
+            <input
+              type="number"
+              min="0.01"
+              step="0.01"
+              onChange={changeCostHandler}
+              value={cost}
+            />
           </div>
         </div>
         <div className="new-cost__controls">
           <div className="new-cost__control">
             <label>Year of discovery</label>
-              <input
-                type="date"
-                min="2020-01-01"
-                max="2025-12-12"
-                onChange={changeDateHandler}
-                value={date}
-              />
+            <input
+              type="date"
+              min="2020-01-01"
+              max="2025-12-12"
+              onChange={changeDateHandler}
+              value={date}
+            />
           </div>
         </div>
         <div className="new-cost__actions">

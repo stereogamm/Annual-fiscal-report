@@ -1,16 +1,15 @@
 import "./CostsFilter.css";
 
-function Filter(props) {
-
+function Filter({ year, onYearSelect }) {
   function yearChangeHandler(event) {
-    props.onYearSelect(event.target.value);
+    onYearSelect(event.target.value);
   }
 
   return (
     <div className="costs-filter">
       <div className="costs-filter__control">
         <label>Select discovery year</label>
-        <select value={props.year} onChange={yearChangeHandler}>
+        <select value={year} onChange={yearChangeHandler}>
           <option value="2025">2025</option>
           <option value="2024">2024</option>
           <option value="2023">2023</option>

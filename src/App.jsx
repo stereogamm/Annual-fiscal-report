@@ -13,13 +13,13 @@ const INITIAL_COSTS = [
     id: "a0",
   },
   {
-    date: new Date(2024, 10, 19),
+    date: new Date(2022, 10, 19),
     item: " 🌖 Serenity",
     sum: 4,
     id: "b1",
   },
   {
-    date: new Date(2024, 11, 1),
+    date: new Date(2025, 11, 1),
     item: " 🌑 Galatia",
     sum: 3,
     id: "c2",
@@ -27,8 +27,14 @@ const INITIAL_COSTS = [
   {
     date: new Date(2022, 2, 3),
     item: " 🪐 Eterna",
-    sum: 1,
+    sum: 10,
     id: "d3",
+  },
+  {
+    date: new Date(2022, 9, 4),
+    item: " 🪐 Prometheus (Saturn XVI)",
+    sum: 5,
+    id: "e4",
   },
 ];
 

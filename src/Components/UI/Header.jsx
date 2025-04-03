@@ -26,7 +26,14 @@ function Header({ onIconClick }) {
   return (
     <header ref={headerRef}>
       <div className="header-block">
-        <img className="header-icon" src="/sphere.svg" alt="circle icon to scroll to the main content" width={50} height={50} onClick={onIconClick}/>
+        <img
+          className="header-icon"
+          src="/sphere.svg"
+          alt="circle icon to scroll to the main content"
+          width={50}
+          height={50}
+          onClick={onIconClick}
+        />
         <h1 className="header-text">nebula chronicles</h1>
       </div>
     </header>
