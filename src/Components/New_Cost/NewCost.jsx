@@ -3,7 +3,7 @@ import CostForm from "./CostForm";
 import "./newCost.css";
 import NewCostContainer from "./NewCostContainer";
 
-const NewCost = forwardRef((props, ref) => {
+const NewCost = forwardRef(({ onAddCost }, ref) => {
   const [isFormVisible, setFormVisible] = useState(false);
 
   function dataFormHandler(allFormFieldsData) {
@@ -11,7 +11,7 @@ const NewCost = forwardRef((props, ref) => {
       ...allFormFieldsData,
       id: "q4",
     };
-    props.onAddCost(costData);
+    onAddCost(costData);
   }
 
   //show/hide form

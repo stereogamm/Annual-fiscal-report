@@ -10,10 +10,9 @@
 
 span {
   display: flex;
-  margin: 3rem 0;
-  align-items: flex-start;
-  color: aliceblue;
-  font-size: 2rem;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
 }
 
 .new-cost button {
