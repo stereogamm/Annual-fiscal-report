@@ -5,7 +5,7 @@ import "./costItem.css";
 function CostItem({date, item, summa}) {
   return (
     <Card className="cost-item">
-      <CostDate dante={date} />
+      <CostDate date={date} />
       <h3 className="cost-item__name">{item}</h3>
       <div className="cost-item__summ">{summa} points</div>
     </Card>

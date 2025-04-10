@@ -1,15 +1,17 @@
+import  { useContextYear }  from "../../context/SelectedYearContext";
 import "./CostsFilter.css";
 
-function Filter({ year, onYearSelect }) {
-  function yearChangeHandler(event) {
-    onYearSelect(event.target.value);
-  }
+function Filter() {
+
+const {selectedYear, setSelectedYear} = useContextYear();
+
+ //to receive value from provider
 
   return (
     <div className="costs-filter">
       <div className="costs-filter__control">
         <label>Select discovery year</label>
-        <select value={year} onChange={yearChangeHandler}>
+        <select value={selectedYear} onChange={setSelectedYear}>
           <option value="2025">2025</option>
           <option value="2024">2024</option>
           <option value="2023">2023</option>
@@ -21,3 +23,5 @@ function Filter({ year, onYearSelect }) {
 }
 
 export default Filter;
+
+

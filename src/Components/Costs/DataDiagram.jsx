@@ -1,5 +1,7 @@
 import Diagram from "../Diagrams/Diagram";
 import { useState, useEffect } from "react";
+import { useContext } from "react"; //!!
+import SelectedYearContext from "../../context/SelectedYearContext"; //!!
 
 const diagramDatasets = [
   { label: "Jan", value: 0 },
@@ -20,6 +22,7 @@ function DataDiagram({ costs }) {
   useEffect(() => {
     calculateTotals();
   }, [costs]);
+
   const [data, setData] = useState([]);
 
   function calculateTotals() {

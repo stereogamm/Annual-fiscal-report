@@ -1,17 +1,14 @@
 import { useState } from "react";
+import SelectedYearContext from "../../context/SelectedYearContext";
 import CostItem from "./CostItem";
 import Card from "../UI/Card";
 import Filter from "./Filter";
 import DataDiagram from "./DataDiagram";
-
 import "./costs.css";
 
+//parent component
 function Costs({ costsValue }) {
   const [selectedYear, setSelectedYear] = useState("2022");
-
-  function handleYearChange(year) {
-    setSelectedYear(year);
-  }
 
   //add filter method to filter cost item according to filtered date
   const filteredData = costsValue.filter((card) => {
@@ -20,10 +17,10 @@ function Costs({ costsValue }) {
 
   //controlled component <Filter />, component Costs is controller
   return (
-    <>
+    <SelectedYearContext.Provider value={{ selectedYear, setSelectedYear }}>
       <Card className="costs__container">
-        <DataDiagram year={selectedYear} costs={filteredData} />
-        <Filter year={selectedYear} onYearSelect={handleYearChange} />
+        <DataDiagram costs={filteredData} />
+        <Filter />
 
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
@@ -38,7 +35,7 @@ function Costs({ costsValue }) {
           <span>There aren't any discoveries yet</span>
         )}
       </Card>
-    </>
+    </SelectedYearContext.Provider>
   );
 }
 

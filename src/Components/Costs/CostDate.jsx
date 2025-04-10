@@ -1,9 +1,9 @@
 import "./costDate.css";
 
-function CostDate({dante}) {
-  const month = dante.toLocaleString("en-EN", { month: "long" });
-  const year = dante.getFullYear();
-  const day = dante.toLocaleString("en-EN", { day: "2-digit" });
+function CostDate({date}) {
+  const month = date.toLocaleString("en-EN", { month: "long" });
+  const year = date.getFullYear();
+  const day = date.toLocaleString("en-EN", { day: "2-digit" });
 
   return (
     <div className="cost-item__data">
